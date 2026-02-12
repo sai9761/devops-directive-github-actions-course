@@ -26,6 +26,8 @@ jobs:
     needs:
       - job-2
       - job-3
+    steps:
+      - run: echo "They can also depend on other runs..."
   job-5:
     runs-on: ubuntu-24.04
     needs:
