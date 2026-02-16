@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  hello-world-1:
+  saibharav:
     runs-on: ubuntu-24.04
     name: One usage of the composite action
     steps:
@@ -11,12 +11,12 @@ jobs:
       - id: composite-action-instance
         uses: ./06-authoring-actions/composite-action
         with:
-          who-to-greet: "from composite action in hello-world-1!"
+          who-to-greet: "from composite action in saibhargav!"
       - env:
           RANDOM_NUMBER: ${{ steps.composite-action-instance.outputs.random-number }}
         run: echo random-number "$RANDOM_NUMBER"
         shell: bash
-  hello-world-2:
+  Tanoj:
     runs-on: ubuntu-24.04
     name: Another usage of the composite action
     steps:
@@ -24,7 +24,7 @@ jobs:
       - id: composite-action-instance
         uses: ./06-authoring-actions/composite-action
         with:
-          who-to-greet: "from composite action in hello-world-2!"
+          who-to-greet: "from composite action in Tanoj!"
       - env:
           RANDOM_NUMBER: ${{ steps.composite-action-instance.outputs.random-number }}
         run: echo random-number "$RANDOM_NUMBER"
